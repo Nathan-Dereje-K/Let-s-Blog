@@ -9,7 +9,7 @@ const Navbar = () => {
       <h1> Fun Blog</h1>
       <div className="links">
         <a href="/">Home</a>
-        <a href="/">About Us</a>
+        <a href="/about">About Us</a>
         <a
           href="/create"
           // style={obj}
