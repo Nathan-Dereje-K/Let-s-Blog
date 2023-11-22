@@ -1,21 +1,19 @@
+import { Link } from "react-router-dom";
+
 const Navbar = () => {
-  // const obj={
+  // const obj = {
   //   color: "white",
-  //           backgroundColor: "#35e4f1",
-  //           borderRadius: "8px",
-  // }
+  //   backgroundColor: "#35e4f1",
+  //   borderRadius: "8px",
+  // };
+
   return (
-    <div className="navbar ">
-      <h1> Fun Blog</h1>
-      <div className="links">
-        <a href="/">Home</a>
-        <a href="/">About Us</a>
-        <a
-          href="/create"
-          // style={obj}
-        >
-          New Blog
-        </a>
+    <div className="navbar">
+      <h1>Fun Blog</h1>
+      <div  className="links">
+        <Link to="/">Home</Link>
+        <Link to="/about">About Us</Link>
+        <Link to="/create">{/* style={obj} */}New Blog</Link>
       </div>
     </div>
   );
