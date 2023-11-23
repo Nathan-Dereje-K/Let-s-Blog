@@ -40,7 +40,7 @@
   border-bottom: px solid #fafafa;
 }
 .blog-preview:hover {
-  box-shadow: 2px 5px 7px rgba(0,0,0,0.3);
+  box-shadow: 0 0 15px rgba(74, 144, 226, 0.8), 0 0 30px rgba(74, 144, 226, 0.5);
 }
 .blog-preview h2 {
   font-size: 20px;
@@ -87,32 +87,65 @@
 
 /* create new blog form */
 .create {
-  max-width: 400px;
+  max-width: 700px;
   margin: 0 auto;
   text-align: center;
 }
+
 .create label {
   text-align: left;
   display: block;
+  margin-bottom: 12px;
+  font-weight: bold;
+  color: #6c757d;
+  font-size: 14px;
 }
+
 .create h2 {
-  font-size: 20px;
-  color: #f1356d;
-  margin-bottom: 30px;
+  font-size: 32px;
+  color: #4a4a4a;
+  margin-bottom: 24px;
 }
-.create input, .create textarea, .create select {
+
+.create input,
+.create textarea,
+.create select {
   width: 100%;
-  padding: 6px 10px;
+  padding: 16px;
   margin: 10px 0;
-  border: 1px solid #ddd;
+  border: 1px solid #6c757d;
   box-sizing: border-box;
   display: block;
+  border-radius: 8px;
+  background-color: #f8f9fa;
+  color: #495057;
+  transition: border-color 0.3s, box-shadow 0.3s;
 }
+
+.create input::placeholder,
+.create textarea::placeholder,
+.create select::placeholder {
+  color: #adb5bd;
+}
+
+.create input:focus,
+.create textarea:focus,
+.create select:focus {
+  border-color: #4a90e2;
+  box-shadow: 0 0 12px rgba(74, 144, 226, 0.3);
+}
+
 .create button {
-  background: #f1356d;
+  background: linear-gradient(45deg, #4a90e2, #f1356d);
   color: #fff;
   border: 0;
-  padding: 8px;
-  border-radius: 8px;
+  padding: 18px 26px;
+  border-radius: 12px;
   cursor: pointer;
+  font-size: 20px;
+  transition: background 0.3s;
+}
+
+.create button:hover {
+  background: linear-gradient(45deg, #f1356d, #4a90e2);
 }
