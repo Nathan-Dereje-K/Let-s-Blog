@@ -9,7 +9,7 @@ const BlogDetails = () => {
     error,
   } = useFetch("http://localhost:8000/blogs/" + id);
   const history = useHistory();
-  const handleDelete = (id) => {
+  const handleDelete = () => {
     fetch("http://localhost:8000/blogs/" + blog.id, {
       method: "DELETE",
     }).then(history.push("/"));

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useHistory } from 'react-router-dom';
+import { useHistory } from "react-router-dom";
 
 const Create = () => {
   const [title, setTitle] = useState("");
@@ -7,7 +7,6 @@ const Create = () => {
   const [author, setAuthor] = useState("");
   const [isPending, setIsPending] = useState(false);
   const history = useHistory();
-  
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -20,10 +19,10 @@ const Create = () => {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(blogObject),
     }).then(() => {
-      console.log("Added a new Blog!");
+      //console.log("Added a new Blog!");
       setIsPending(false);
       // history.go(-1);
-      history.push('/');
+      history.push("/");
     });
   };
   const handleClick = () => {
@@ -57,7 +56,7 @@ const Create = () => {
           placeholder="John Doe"
         ></input>
 
-        {!isPending && <button onClick={handleClick} >Add Blog</button>}
+        {!isPending && <button onClick={handleClick}>Add Blog</button>}
         {isPending && <button>Adding blog ....</button>}
       </form>
     </div>
