@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 const BlogList = ({ blogs, Title }) => {
+  
   return (
     <div className="blog-list">
       <h2>{Title}</h2>
@@ -11,6 +12,7 @@ const BlogList = ({ blogs, Title }) => {
               <h2>{blog.title}</h2>
               <p>performed by {blog.author}</p>
             </Link>
+            
           </div>
         ))
       ) : (
