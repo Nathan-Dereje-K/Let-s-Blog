@@ -8,8 +8,10 @@ import BlogDetails from "./BlogDetails";
 function App() {
   return (
     <Router>
-      <div className="base">
-        <Navbar />
+      <div className="">
+        <div className="base">
+          <Navbar />
+        </div>
         <div className="content">
           <Switch>
             <Route exact path="/">
